@@ -1,0 +1,34 @@
+@startuml
+
+title Class Diagram \n
+
+class Factory {
+Factory() : construct
+createProduct() : Product
+}
+
+class Main {
+Main() : construct
+main() : void
+}
+
+class ConcreteProduct1 {
+ConcreteProduct1() : construct
+doSomething() : void
+}
+
+interface Product {
+doSomething() : void
+}
+
+class ConcreteProduct2 {
+ConcreteProduct2() : construct
+doSomething() : void
+}
+
+
+Factory --> Product
+ConcreteProduct1 ..|> Product
+ConcreteProduct2 ..|> Product
+
+@enduml
